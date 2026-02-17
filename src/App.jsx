@@ -13,7 +13,7 @@ function App() {
     const fetchCandidate = async () => {
       try {
         const response = await fetch(
-          `${BASE_URL}api/candidate/get-by-asemail?email=florenciaechauri@gmail.com`
+          `${BASE_URL}api/candidate/get-by-email?email=florenciaechauri@gmail.com`
         );
 
         if (!response.ok) {
