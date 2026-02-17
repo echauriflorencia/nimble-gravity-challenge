@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import JobItem from "./components/JobItem";
 
 const BASE_URL = "https://botfilter-h5ddh6dye8exb7ha.centralus-01.azurewebsites.net/";
 function App() {
@@ -48,9 +49,7 @@ function App() {
   return (
     <>
       {jobs.map(job => (
-        <div key={job.id}>
-          <h3>{job.title}</h3>
-        </div>
+        <JobItem key={job.id} job={job} />
       ))}
     </>
   );
